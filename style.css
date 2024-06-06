@@ -42,3 +42,11 @@ video {
   display: block;
   max-width: 100%;
 }
+
+body {
+  font-family: var(--bf);
+  font-size: var(--fs-18);
+  background: var(--dark-purple-mid);
+  color: var(--bc);
+  line-height: 1.44;
+}
