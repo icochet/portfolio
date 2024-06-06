@@ -6,3 +6,14 @@
   padding: 0;
 }
 
+:root {
+  /* Colors */
+  --mc1: #cc00ff;
+  --mc2: #7000ff;
+  --tc: #ddd;
+  --bc: #9ba0b8;
+
+  /* Fonts */
+  --tf: 'Heebo', sans-serif;
+  --bf: 'Nunito', sans-serif;
+}
