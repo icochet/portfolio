@@ -35,13 +35,7 @@
   --dark-purple-mid: linear-gradient(90deg, #1b121d 0%, #120f2f 50%, #1b121d 100%);
 }
 
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
+/* Global & utilities */
 
 body {
   font-family: var(--bf);
@@ -71,4 +65,12 @@ body::after {
   background-color: var(--mc2);
   border-radius: 50%;
   filter: blur(150px);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
 }
