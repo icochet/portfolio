@@ -44,24 +44,30 @@ body {
   color: var(--bc);
   line-height: 1.44;
 }
+
 body::before {
   content: '';
   position: fixed;
   width: 270px;
   height: 270px;
-  top: 27.5%; /* 297px */
-  left: 23.9%; /* 479px */
+  top: 27.5%;
+  /* 297px */
+  left: 23.9%;
+  /* 479px */
   background-color: var(--mc1);
   border-radius: 50%;
   filter: blur(150px);
 }
+
 body::after {
   content: '';
   position: fixed;
   width: 270px;
   height: 270px;
-  top: 42.8%; /* 463px */
-  right: 25%; /* 487px */
+  top: 42.8%;
+  /* 463px */
+  right: 25%;
+  /* 487px */
   background-color: var(--mc2);
   border-radius: 50%;
   filter: blur(150px);
@@ -73,4 +79,19 @@ svg,
 video {
   display: block;
   max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--tf);
+  color: var(--tc);
+  line-height: 1.22;
+}
+
+a {
+  text-decoration: none;
 }
