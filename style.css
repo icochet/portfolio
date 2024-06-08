@@ -40,6 +40,7 @@
 body {
   font-family: var(--bf);
   font-size: var(--fs-18);
+  font-weight: 400;
   background: var(--dark-purple-mid);
   color: var(--bc);
   line-height: 1.44;
@@ -94,4 +95,38 @@ h6 {
 
 a {
   text-decoration: none;
+  font-family: var(--tf);
+  color: var(--tc);
+  font-weight: 500;
+}
+
+/* Navigation */
+
+.creative_link {
+  position: relative;
+  background-image: linear-gradient(90deg, var(--mc1), var(--mc1) 50%, var(--tc) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.creative_link::before {
+  content: "";
+  position: absolute;
+  background: var(--mc1);
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.creative_link:hover {
+  background-position: 0;
+}
+
+.creative_link:hover::before {
+  width: 100%;
 }
