@@ -192,12 +192,12 @@ header::after {
   z-index: -1;
   transition: all .3s ease;
 }
-header.active::after {
-  transform: translateY(0);
-}
 header.active {
   padding: 20px 30px;
   border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+header.active::after {
+  transform: translateY(0);
 }
 
 nav {
