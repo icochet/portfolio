@@ -100,6 +100,38 @@ a {
   font-weight: 500;
 }
 
+/* Header */
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  border-bottom: 1px solid transparent;
+  transition: all .3s ease;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dark-purple-mid);
+  transform: translateY(-105%);
+  z-index: -1;
+  transition: all .3s ease;
+}
+
+header.active::after {
+  transform: translateY(0);
+}
+
+header.active {
+  padding: 20px 30px;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
 /* Navigation */
 
 .creative_link {
