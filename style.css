@@ -96,8 +96,79 @@ h6 {
 a {
   text-decoration: none;
   font-family: var(--tf);
-  color: var(--tc);
   font-weight: 500;
+  color: var(--tc);
+}
+
+/* Reusable components */
+
+.creative_link {
+  position: relative;
+  font-size: var(--fs-18);
+  background-image: linear-gradient(90deg, var(--mc1), var(--mc1) 50%, var(--tc) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  background-clip: text;
+  color: transparent;
+  transition: .3s ease-in-out;
+}
+.creative_link::before {
+  content: "";
+  position: absolute;
+  background: var(--mc1);
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: .3s ease-in-out;
+}
+.creative_link:hover {
+  background-position: 0;
+}
+.creative_link:hover::before {
+  width: 100%;
+}
+
+.creative_button{
+  position: relative;
+  font-size: var(--fs-14);
+  letter-spacing: .5px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+.creative_button::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background: linear-gradient(45deg, var(--mc1), var(--mc2), var(--mc1), var(--mc2));
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  background-size: 300%;
+  animation: animatedgradient 4s ease alternate infinite;
+}
+.creative_button:hover{
+  color: #fff;
+}
+.creative_button:hover::before{
+  background: var(--mc1);
+  transition: .3s ease-in;
+}
+.creative_button:active::before {
+  background: var(--mc2);
+  transition: none;
+}
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Header */
@@ -112,7 +183,6 @@ header {
   border-bottom: 1px solid transparent;
   transition: all .3s ease;
 }
-
 header::after {
   content: '';
   position: absolute;
@@ -122,43 +192,15 @@ header::after {
   z-index: -1;
   transition: all .3s ease;
 }
-
 header.active::after {
   transform: translateY(0);
 }
-
 header.active {
   padding: 20px 30px;
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Navigation */
-
-.creative_link {
-  position: relative;
-  background-image: linear-gradient(90deg, var(--mc1), var(--mc1) 50%, var(--tc) 50%);
-  background-size: 200% 100%;
-  background-position: -100%;
-  background-clip: text;
-  color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.creative_link::before {
-  content: "";
-  position: absolute;
-  background: var(--mc1);
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-.creative_link:hover {
-  background-position: 0;
-}
-
-.creative_link:hover::before {
-  width: 100%;
+nav {
+  display: flex;
+  gap: 45px;
 }
