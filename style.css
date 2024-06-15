@@ -48,7 +48,6 @@ body {
   line-height: 1.44;
   min-height: 100svh;
 }
-
 body::before {
   content: '';
   position: fixed;
@@ -61,7 +60,6 @@ body::before {
   filter: blur(150px);
   z-index: -10;
 }
-
 body::after {
   content: '';
   position: fixed;
@@ -214,6 +212,9 @@ header.active::after {
 }
 
 nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 nav ul {
@@ -285,6 +286,7 @@ nav ul {
   nav {
     display: grid;
     position: absolute;
+    transform: none;
     width: 100%;
     top: 91px;
     left: 0;
