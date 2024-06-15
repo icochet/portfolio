@@ -46,6 +46,7 @@ body {
   background: var(--dark-purple-mid);
   color: var(--bc);
   line-height: 1.44;
+  min-height: 100svh;
 }
 
 body::before {
@@ -310,13 +311,7 @@ nav ul {
 }
 @media (max-width: 520px) {
   header {
-    padding: 30px 10px;
-  }
-  header.active {
     padding: 20px 10px;
-  }
-  nav {
-    top: 111px;
   }
 }
 @media (max-width: 400px) {
