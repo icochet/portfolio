@@ -332,7 +332,7 @@ footer ul {
   list-style: none;
 }
 
-footer ul li > *:not(h3) {
+footer ul li {
   font-size: var(--fs-16);
 }
 
@@ -349,4 +349,26 @@ footer > p {
   font-size: var(--fs-14);
   align-self: flex-end;
   text-transform: none;
+}
+
+@media (max-width: 1024px) {
+  footer ul li {
+    font-size: var(--fs-14);
+  }
+  footer ul h3 {
+    font-size: var(--fs-18);
+  }
+}
+@media (max-width: 800px) {
+  footer {
+    gap: 25px;
+  }
+}
+@media (max-width: 520px) {
+  footer {
+    gap: 10px;
+  }
+  footer > p {
+    font-size: var(--fs-12);
+  }
 }
