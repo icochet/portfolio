@@ -14,10 +14,12 @@ function headerFixer() {
 
 // Navigation responsive
 
-var hamburgerButton = document.querySelector(".hamburger_menu");
-var nav = document.querySelector("nav");
+const hamburgerButton = document.querySelector(".hamburger_menu");
+const nav = document.querySelector("nav");
+const main = document.querySelector("main");
 
 hamburgerButton.addEventListener("click", () => {
   hamburgerButton.classList.toggle("active");
   nav.classList.toggle("active");
+  main.classList.toggle("active");
 });

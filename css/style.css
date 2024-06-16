@@ -383,6 +383,8 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 0;
+  transition: .3s ease;
 }
 
 .presentation {
@@ -453,6 +455,39 @@ main {
   }
   50% {
     transform: translateY(5px);
+  }
+}
+
+@media (max-width: 1024px) {
+  main.active {
+    margin-top: 150px;
+    transition: .3s ease;
+  }
+  .presentation {
+    padding-top: 100px;
+    padding-bottom: 75px;
+  }
+}
+@media (max-width: 520px) {
+  .presentation h1 {
+    font-size: var(--fs-42);
+  }
+  .age {
+    align-self: center;
+    font-size: var(--fs-24);
+    margin: 0;
+  }
+  .presentation div {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .photo {
+    translate: none;
+  }
+}
+@media (max-width: 400px) {
+  .cv {
+    padding: 15px;
   }
 }
 
