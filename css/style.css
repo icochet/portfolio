@@ -387,6 +387,8 @@ main {
   transition: .3s ease;
 }
 
+/* Presentation */
+
 .presentation {
   display: flex;
   flex-direction: column;
@@ -489,6 +491,33 @@ main {
   .cv {
     padding: 15px;
   }
+}
+
+/* About me */
+
+#about {
+  padding: 30px;
+  max-width: 1800px;
+  width: 100%;
+}
+
+#about h3 {
+  font-size: var(--fs-24);
+}
+
+#about div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 900px;
+  text-align: center;
+  margin: 50px auto;
+  gap: 40px;
+}
+
+#about p {
+  font-size: var(--fs-24);
 }
 
 /* Footer */
