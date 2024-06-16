@@ -188,6 +188,7 @@ header {
   width: 100%;
   padding: 30px 50px;
   border-bottom: 1px solid transparent;
+  z-index: 10;
   transition: .3s ease;
 }
 header::after {
@@ -211,12 +212,6 @@ header.active::after {
   width: 50px;
 }
 
-nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
 nav ul {
   display: flex;
   list-style: none;
@@ -286,7 +281,6 @@ nav ul {
   nav {
     display: grid;
     position: absolute;
-    transform: none;
     width: 100%;
     top: 91px;
     left: 0;
@@ -294,6 +288,7 @@ nav ul {
     background: var(--mc3);
     padding: 20px;
     translate: 0 -40px;
+    z-index: -1;
     transition: .3s ease;
   }
   nav ul {
