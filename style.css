@@ -103,7 +103,6 @@ a {
 
 .creative_link {
   position: relative;
-  font-size: var(--fs-18);
   background-image: linear-gradient(90deg, var(--mc1), var(--mc1) 50%, var(--tc) 50%);
   background-size: 200% 100%;
   background-position: -100%;
@@ -315,4 +314,39 @@ nav ul {
   .cv {
     padding: 15px;
   }
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  background: rgba(10, 10, 10, .2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  gap: 50px;
+  text-transform: uppercase;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li > *:not(h3) {
+  font-size: var(--fs-16);
+}
+
+footer ul h3 {
+  font-size: var(--fs-22);
+  margin-bottom: 20px;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer > p {
+  font-size: var(--fs-14);
+  align-self: flex-end;
+  text-transform: none;
 }
