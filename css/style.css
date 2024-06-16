@@ -27,6 +27,7 @@
   --fs-22: 1.375rem;
   --fs-24: 1.5rem;
   --fs-26: 1.625rem;
+  --fs-32: 2rem;
   --fs-40: 2.5rem;
   --fs-42: 2.625rem;
   --fs-64: 4rem;
@@ -38,6 +39,10 @@
 }
 
 /* Global & utilities */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--bf);
@@ -150,8 +155,7 @@ a {
   color: #fff;
 }
 .creative_button:hover::before{
-  background: var(--mc1);
-  transition: .3s ease-in;
+  animation-duration: 1.5s;
 }
 .creative_button:active::before {
   background: var(--mc2);
@@ -316,7 +320,83 @@ nav ul {
   }
 }
 
+/* Main */
 
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 200px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation h1 {
+  position: relative;
+  font-size: var(--fs-64);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.presentation h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-image: linear-gradient(180deg, var(--mc1), var(--mc2));
+  background-clip: text;
+  color: transparent;
+  z-index: -1;
+}
+
+.age {
+  align-self: flex-end;
+  font-size: var(--fs-32);
+  margin-right: 20px;
+}
+
+.presentation div {
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  width: 300px;
+  translate: -25px -25px;
+}
+
+.apropos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  letter-spacing: 1px;
+  padding: 50px 25px;
+}
+
+.apropos span {
+  font-size: var(--fs-16);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.apropos img {
+  width: 20px;
+  animation: arrowAnim 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowAnim {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
 
 /* Footer */
 
