@@ -52,6 +52,7 @@ body {
   color: var(--bc);
   line-height: 1.44;
   min-height: 100svh;
+  overflow-x: hidden;
 }
 body::before {
   content: '';
