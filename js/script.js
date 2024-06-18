@@ -47,7 +47,6 @@ const main = document.querySelector("main");
 hamburgerButton.addEventListener("click", () => {
   hamburgerButton.classList.toggle("active");
   nav.classList.toggle("active");
-  main.classList.toggle("active");
 });
 
 // Competences

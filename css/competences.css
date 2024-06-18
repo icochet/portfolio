@@ -40,7 +40,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   overflow: hidden;
-  transition: .5s;
+  transition: .4s;
 }
 .view_more:hover {
   background: #fff;
@@ -55,7 +55,7 @@
   text-shadow: 0 50px #000;
   font-weight: bold;
   translate: 0;
-  transition: translate .3s;
+  transition: translate .2s;
 }
 .view_more:hover span.hover {
   translate: 0 -48px;

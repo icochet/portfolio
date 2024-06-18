@@ -4,8 +4,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 0;
-  transition: .3s ease;
 }
 
 /* Presentation */
@@ -64,10 +62,6 @@ main {
 }
 
 @media (max-width: 1024px) {
-  main.active {
-    margin-top: 150px;
-    transition: .3s ease;
-  }
   .presentation {
     padding-top: 100px;
     padding-bottom: 75px;
