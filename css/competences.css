@@ -20,11 +20,50 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .7) 100%);
 }
 
+.swiper-slide-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.view_more {
+  padding: 10px 30px;
+  font-size: var(--fs-26);
+  background: transparent;
+  border: 4px solid #fff;
+  font-weight: 500;
+  border-radius: 40px;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+}
+.view_more:hover {
+  background: #fff;
+  box-shadow: 0 0 25px #fff,
+              0 0 100px #fff,
+              0 0 150px #fff;
+}
+
+.view_more span {
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 50px #000;
+  font-weight: bold;
+  translate: 0;
+  transition: translate .3s;
+}
+.view_more:hover span.hover {
+  translate: 0 -48px;
+}
+
 .swiper-slide-title {
   position: absolute;
-  width: 100%;
   top: 80%;
-  text-align: center;
 }
 
 .slider_nav {
