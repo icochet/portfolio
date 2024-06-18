@@ -34,7 +34,9 @@ function menuCenter() {
   }
 }
 
-menuCenter();
+if (window.innerWidth >= 1024) {
+  menuCenter();
+}
 
 // Navigation responsive
 
