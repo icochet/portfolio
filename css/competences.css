@@ -129,6 +129,10 @@
   margin-left: 4px;
 }
 
+.swiper-pagination span {
+  background: #fff;
+}
+
 @media (max-width: 1400px) {
   .swiper-slide-title {
     font-size: var(--fs-42);

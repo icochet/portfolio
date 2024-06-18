@@ -66,6 +66,12 @@ function compSlider() {
       prevEl: ".swiper-button-prev",
     },
 
+    pagination: {
+      el: '.swiper-pagination',
+      type: "bullets",
+      clickable: true
+    },
+
     slidesPerView: 1,
     direction: direction,
     watchSlidesProgress: true,

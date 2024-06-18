@@ -1,0 +1,66 @@
+.formation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1800px;
+  padding: 175px 0 175px 0;
+}
+
+.formation article {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+  max-width: 550px;
+}
+
+.formation article a {
+  position: relative;
+}
+.formation article > a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 150px;
+  border-radius: 50%;
+  background: #fff;
+  filter: blur(60px);
+}
+
+.formation div a {
+  font-weight: bold;
+  font-size: var(--fs-26);
+}
+
+.formation p {
+  margin-top: 15px;
+}
+
+.iut {
+  margin-right: 150px;
+}
+
+.lycee {
+  margin-left: 150px;
+}
+
+.iut_logo {
+  rotate: -10deg;
+  transition: scale .2s ease;
+}
+.iut_logo:hover {
+  scale: 0.9;
+}
+
+.lycee_logo {
+  width: 300px;
+  rotate: -5deg;
+  transition: scale .2s ease;
+}
+.lycee_logo:hover {
+  scale: 0.9;
+}
