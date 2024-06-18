@@ -51,16 +51,45 @@ hamburgerButton.addEventListener("click", () => {
 // Competences
 
 function compSlider() {
+  const transform = 'X';
+  const direction = "horizontal";
+  const interleaveOffset = 0.5;
+  const rate = document.body.classList.contains('rtl') ? -1 : 1;
+
   const swiper = new Swiper('.swiper', {
+    loop: true,
+    speed: 1500,
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
 
-    pagination: {
-      el: '.swiper-pagination',
-      type: "bullets",
-      clickable: true
+    slidesPerView: 1,
+    direction: direction,
+    watchSlidesProgress: true,
+
+    on: {
+      progress: function (swiper) {
+        for (let i = 0; i < swiper.slides.length; i++) {
+          let slideProgress = swiper.slides[i].progress;
+          let innerOffset = swiper.width * interleaveOffset;
+          let innerTranslate = slideProgress * innerOffset * rate;
+          swiper.slides[i].querySelector(".abs_img").style.transform =
+            `translate${transform}(${innerTranslate}px)`;
+        }
+      },
+      touchStart: function (swiper) {
+        for (let i = 0; i < swiper.slides.length; i++) {
+          swiper.slides[i].style.transition = "";
+        }
+      },
+      setTransition: function (swiper, speed) {
+        for (let i = 0; i < swiper.slides.length; i++) {
+          swiper.slides[i].style.transition = `${speed}ms`;
+          swiper.slides[i].querySelector(".abs_img").style.transition = `${speed}ms`;
+        }
+      }
     }
   });
 }
