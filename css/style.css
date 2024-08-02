@@ -461,9 +461,11 @@ footer > p {
 }
 @media (max-width: 520px) {
   footer {
-    gap: 10px;
+    flex-direction: column;
+    text-align: center;
   }
+
   footer > p {
-    font-size: var(--fs-12);
+    align-self: auto;
   }
 }
