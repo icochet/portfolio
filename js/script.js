@@ -1,3 +1,9 @@
+// General constants
+
+const nav = document.querySelector("nav");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
+
 // Header
 
 function headerFixer() {
@@ -13,37 +19,37 @@ function headerFixer() {
 window.addEventListener("scroll", headerFixer);
 
 function menuCenter() {
-  const left = document.querySelector("header .logo");
-  const right = document.querySelector("header .cv");
-  const nav = document.querySelector("header nav");
-  let leftWidth = 0;
-  let rightWidth = 0;
+  if (window.innerWidth >= 1200) {
+    const left = document.querySelector("header .logo");
+    const right = document.querySelector("header .cv");
+    let leftWidth = 0;
+    let rightWidth = 0;
 
-  if (left) {
-    leftWidth = parseInt(window.getComputedStyle(left).width);
-  }
-
-  if (right) {
-    rightWidth = parseInt(window.getComputedStyle(right).width);
-  }
-
-  if (leftWidth < rightWidth) {
-    nav.style.paddingLeft = rightWidth - leftWidth + "px";
+    if (left) {
+      leftWidth = parseInt(window.getComputedStyle(left).width);
+    }
+    if (right) {
+      rightWidth = parseInt(window.getComputedStyle(right).width);
+    }
+    if (leftWidth < rightWidth) {
+      nav.style.padding = `0 0 0 ${rightWidth-leftWidth}px`;
+    } else {
+      nav.style.padding = `0 ${leftWidth-rightWidth}px 0 0`;
+    }
+  } else if (window.innerWidth >= 1024) {
+    nav.style.padding = "0"
+  } else if (window.innerWidth >= 520) {
+    nav.style.padding = "20px 40px";
   } else {
-    nav.style.paddingRight = leftWidth - rightWidth + "px";
+    nav.style.padding = "20px";
   }
 }
 
-if (window.innerWidth >= 1024) {
-  menuCenter();
-}
+window.addEventListener("resize", menuCenter);
 
 // Navigation responsive
 
 const hamburgerButton = document.querySelector(".hamburger_menu");
-const nav = document.querySelector("nav");
-const main = document.querySelector("main");
-const footer = document.querySelector("footer");
 
 hamburgerButton.addEventListener("click", () => {
   hamburgerButton.classList.toggle("active");

@@ -377,7 +377,7 @@ nav ul {
     left: 0;
     grid-template-rows: 0fr; /* pour l'animation de slide down et up */
     background: var(--mc3);
-    padding: 20px;
+    padding: 20px 40px;
     translate: 0 -40px;
     z-index: -1;
     transition: .3s ease;
@@ -400,6 +400,9 @@ nav ul {
 @media (max-width: 520px) {
   header {
     padding: 20px 10px;
+  }
+  nav {
+    padding: 20px;
   }
 }
 @media (max-width: 400px) {
