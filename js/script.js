@@ -43,10 +43,13 @@ if (window.innerWidth >= 1024) {
 const hamburgerButton = document.querySelector(".hamburger_menu");
 const nav = document.querySelector("nav");
 const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 
 hamburgerButton.addEventListener("click", () => {
   hamburgerButton.classList.toggle("active");
   nav.classList.toggle("active");
+  main.classList.toggle("active");
+  footer.classList.toggle("active");
 });
 
 // Competences

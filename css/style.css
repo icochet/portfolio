@@ -79,6 +79,17 @@ body::after {
   z-index: -10;
 }
 
+main,
+footer {
+  translate: 0;
+  transition: .3s ease;
+}
+main.active,
+footer.active {
+  translate: 0 150px;
+  transition: .3s ease;
+}
+
 img,
 picture,
 svg,
